@@ -41,6 +41,11 @@ This test evaluates your ability to design, implement, and explain a multi-compo
     - **Worker Management**: With BullMQ, you can scale workers independently, allowing the system to handle more events as the load grows.
     - **Reliability**: It provides job failure retries and event-based handling, which is important for processing large volumes of events without losing data.
 - What database did you use and why?
+  - I've choosed **(PostgreSQL)** for Database.
+  - Why:
+    - **Relational Data**: PostgreSQL is an excellent choice for structured data like events, where relational integrity is important.
+    - **Scalability**: PostgreSQL is capable of handling large-scale data efficiently, and it supports advanced features like indexing, transactions, and concurrency control.
+    - **Integration**: PostgreSQL integrates well with libraries like TypeORM or Prisma for database access, providing an ORM layer to simplify querying and schema management.
 - What key decisions did you make about how the system is structured and why?
 
 
