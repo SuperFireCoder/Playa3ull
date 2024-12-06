@@ -1,12 +1,18 @@
-import { Queue, Worker } from 'bullmq';
-import { EventProcessor } from '../worker/eventProcessor';
+import { Queue } from 'bullmq';
+import { Event } from '../api/schema/eventSchema';
 
-const eventQueue = new Queue('eventQueue', {
-  connection: { host: 'localhost' },
+export const eventQueue = new Queue('eventQueue', {
+  connection: {
+    host: 'localhost',
+    port: 6379,
+  },
 });
 
-const worker = new Worker('eventQueue', EventProcessor, {
-  connection: { host: 'localhost' },
-});
-
-export { eventQueue, worker };
+export const addEventToQueue = async (event: Event) => {
+  try {
+    await eventQueue.add('processEvent', event);
+    console.log('Event added to the queue:', event);
+  } catch (error) {
+    console.error('Error adding event to the queue:', error);
+  }
+};

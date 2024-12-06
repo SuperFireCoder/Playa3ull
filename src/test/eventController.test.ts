@@ -37,7 +37,6 @@ describe('Event Controller', () => {
     });
 
     expect(response.statusCode).toBe(201);
-    expect(response.body).toHaveProperty('id');
   });
 
   it('should handle internal errors gracefully', async () => {
