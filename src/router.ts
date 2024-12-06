@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import eventController from "./controller/eventController";
+import eventController from "./api/controller/eventController";
 
 export default async function router(fastify: FastifyInstance) {
   fastify.register(eventController, { prefix: "/api/events" });

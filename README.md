@@ -29,7 +29,17 @@ This test evaluates your ability to design, implement, and explain a multi-compo
 
 ## Questions
 - What did you use for the API and why?
+  - I've choosed **Fastify** for the API development.
+  - Why:
+    - **Performance**: Fastify is designed to be fast, with low overhead, which is ideal for handling large-scale event ingestion.
+    - **Type-Safety**: It supports TypeScript natively and allows for type-safe request validation and error handling, which is critical for this system.
+    - **Plugins**: Fastify’s plugin-based architecture enables modularization, which helps scale the API as more features are added.
 - What queue/worker system did you choose and why?
+  - I've choosed **(BullMQ)** for Queue/Worker System.
+  - Why:
+    - **Distributed Queueing**: BullMQ provides job queues with automatic retries, delays, and prioritization. This is suitable for handling events from a game.
+    - **Worker Management**: With BullMQ, you can scale workers independently, allowing the system to handle more events as the load grows.
+    - **Reliability**: It provides job failure retries and event-based handling, which is important for processing large volumes of events without losing data.
 - What database did you use and why?
 - What key decisions did you make about how the system is structured and why?
 
