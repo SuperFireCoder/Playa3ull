@@ -9,8 +9,8 @@ const server = fastify({
 
 const startServer = async () => {
   try {
-    await initDb();
     server.register(router);
+    await initDb();
   } catch (error) {
     console.error("Error during app startup:", error);
     process.exit(1);

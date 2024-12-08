@@ -10,7 +10,6 @@ export const initDb = async () => {
     password: process.env.DB_PASSWORD || 'password',
     database: process.env.DB_NAME || 'game_events',
     entities: [Event],
-    synchronize: true, // Set to false in production
   });
 
   try {

@@ -66,25 +66,10 @@ $ npm run install
 ```
 
 ## Usage
-
-### Development
 ```bash
-# Required: typescript watch compilation
-$ npm run watch
+# build
+$ docker compose build
 
-# Required: development server with hot reload (nodemon)
-$ npm run dev
-
-# Format with prettier
-$ npm run format
-```
-
-### Production
-
-```bash
-# build for production
-$ npm run build
-
-# start production app
-$ npm run start
+# start app
+$ docker compose up
 ```
