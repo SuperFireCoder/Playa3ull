@@ -48,10 +48,6 @@ This test evaluates your ability to design, implement, and explain a multi-compo
     - **Integration**: PostgreSQL integrates well with libraries like TypeORM or Prisma for database access, providing an ORM layer to simplify querying and schema management.
 - What key decisions did you make about how the system is structured and why?
 
-
-> [!IMPORTANT]
-> Answer the above questions in this file
-
 ## Extra Credit
 - Implement a retry mechanism in the worker for failed jobs
 - Include a performance optimization (e.g. batch processing in the worker)

@@ -22,6 +22,7 @@ export const eventWorker = new Worker('eventQueue', async (job: Job) => {
     max: 5,
     duration: 1000,
   },
+  concurrency: 10,
 });
 
 eventWorker.on('completed', (job) => {
