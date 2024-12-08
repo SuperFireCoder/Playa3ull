@@ -3,7 +3,7 @@ import { Event } from '../api/schema/eventSchema';
 
 export const eventQueue = new Queue('eventQueue', {
   connection: {
-    host: 'localhost',
+    host: 'redis',
     port: 6379,
   },
 });

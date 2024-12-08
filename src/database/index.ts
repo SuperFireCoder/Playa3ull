@@ -4,11 +4,11 @@ import { Event } from './eventModel';
 export const initDb = async () => {
   const dataSource = new DataSource({
     type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'user',
-    password: 'password',
-    database: 'game_events',
+    host: process.env.DB_HOST || 'postgres',
+    port: Number(process.env.DB_PORT) || 5432,
+    username: process.env.DB_USER || 'user',
+    password: process.env.DB_PASSWORD || 'password',
+    database: process.env.DB_NAME || 'game_events',
     entities: [Event],
     synchronize: true, // Set to false in production
   });

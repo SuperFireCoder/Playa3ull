@@ -15,7 +15,7 @@ export const eventWorker = new Worker('eventQueue', async (job: Job) => {
   }
 }, {
   connection: {
-    host: 'localhost',
+    host: 'redis',
     port: 6379,
   },
   limiter: {
