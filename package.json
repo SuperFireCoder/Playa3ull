@@ -12,7 +12,7 @@
   "author": "Wesley Wang",
   "license": "MIT",
   "dependencies": {
-    "@sinclair/typebox": "^0.34.11",
+    "@sinclair/typebox": "^0.34.12",
     "bullmq": "^5.31.2",
     "fastify": "^5.1.0",
     "ioredis": "^5.4.1",
